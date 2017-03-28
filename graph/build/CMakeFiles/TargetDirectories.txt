@@ -1,0 +1,4 @@
+/home/peko/prj/dig/graph/build/CMakeFiles/rebuild_cache.dir
+/home/peko/prj/dig/graph/build/CMakeFiles/edit_cache.dir
+/home/peko/prj/dig/graph/build/CMakeFiles/test_graph.dir
+/home/peko/prj/dig/graph/build/CMakeFiles/graph.dir

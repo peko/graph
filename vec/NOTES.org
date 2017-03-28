@@ -1,0 +1,10 @@
+* Geometry
+
+** triangles
+  - p = (a+b+c)/2
+  - S = sqrt(p*(p-a)*(p-b)*(p-c))
+  - S = 1/4*sqrt((a+b+c)*(a+b-c)*(a+c-b)*(b+c-a))
+  - S = a*b*c/R/4
+** prism
+  - V = S/3*(h0+h1+h2)
+

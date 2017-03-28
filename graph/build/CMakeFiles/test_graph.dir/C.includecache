@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../../dep/klib/kvec.h
+kvec.h
+../../dep/klib/kvec.h
+stdlib.h
+-
+
+/home/peko/prj/dig/graph/graph.h
+stdint.h
+-
+kvec.h
+/home/peko/prj/dig/graph/kvec.h
+
+/home/peko/prj/dig/graph/test_graph.c
+stdio.h
+-
+graph.h
+/home/peko/prj/dig/graph/graph.h
+
