@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/peko/prj/dig/dep/delaunay/delaunay.c
+stdio.h
+-
+stdlib.h
+-
+math.h
+-
+string.h
+-
+assert.h
+-
+delaunay.h
+/home/peko/prj/dig/dep/delaunay/delaunay.h
+
+/home/peko/prj/dig/dep/delaunay/delaunay.h
+

@@ -7,6 +7,7 @@
 #include "glad/glad.h"
 #include <GLFW/glfw3.h>
 
+#include "gui_i.h"
 #include "scene.h"
 #include "render.h"
 
@@ -16,11 +17,13 @@ static void on_mouse_move  (GLFWwindow* window, double xpos, double ypos);
 static void on_mouse_button(GLFWwindow* window, int button, int action, int mods);
 static void on_scroll      (GLFWwindow* window, double xoffset, double yoffset);
 
+extern gui_i    gui_master;
 extern render_t render_wire;
-extern scene_t scene_hexagons;
+extern scene_t  scene_hexagons;
 
-static scene_t scene;
+static scene_t  scene;
 static render_t render;
+static gui_i    gui;
 
 int
 main(int argc, char** argv) {
@@ -44,7 +47,6 @@ main(int argc, char** argv) {
         exit(EXIT_FAILURE);
     }
 
-
     glfwSetKeyCallback        (window, on_key         );
     glfwSetScrollCallback     (window, on_scroll      );
     glfwSetCursorPosCallback  (window, on_mouse_move  );
@@ -53,6 +55,9 @@ main(int argc, char** argv) {
     glfwMakeContextCurrent(window);
     gladLoadGLLoader((GLADloadproc) glfwGetProcAddress);
     glfwSwapInterval(1);
+
+    gui = gui_master;
+    gui.init(window);
 
     render = render_wire;
     render.init();
@@ -72,11 +77,16 @@ main(int argc, char** argv) {
         
         scene.update();
         render.draw(&scene);
+        
+        gui.update();
+        gui.draw();
 
         glfwPollEvents();
-
+        
         glfwSwapBuffers(window);
     }
+
+    gui.free();
     scene.free();
     render.free();
 

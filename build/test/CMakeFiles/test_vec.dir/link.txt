@@ -1,0 +1,1 @@
+/usr/bin/cc     CMakeFiles/test_vec.dir/test_vec.c.o  -o test_vec -rdynamic vec/libvec.a -lm vec/delaunay/libdelaunay.a 

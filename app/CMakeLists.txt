@@ -30,6 +30,7 @@ set(SOURCE_FILES
   main.c
   scene_hexagons.c
   render_wire.c
+  gui_master.c
   shader.c
   vbo.c)
 
