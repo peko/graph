@@ -1,14 +1,33 @@
 #include <math.h>
 
-#include "scene.h"
+#include "scene_i.h"
+
 #include "kvec.h"
 
+  //////////////
+ /// STATIC ///
+//////////////
+
 static vbo_t* vbo;
+static cam_t* cam;
+static cam_t _cam = {
+    .x = 0.0,
+    .y = 0.0,
+    .s = 1.0,
+    .r = 1.0
+};
+
+static GLFWwindow* win;
 
 // interaface
 static void 
-_init(){
+_init(GLFWwindow* window) {
+    
+    win = window;
+
+    cam = &_cam;
     vbo = vbo_new();    
+
     // alloc ten parts by ten points
     parts_v parts;
     kv_init(parts);
@@ -31,14 +50,15 @@ _init(){
     // free parts
     for(int i=0; i<10; i++ ) kv_destroy(parts.a[i]);
     kv_destroy(parts);
+    
 };
 
 static void 
-_update(){};
+_update(){
+};
 
 static void 
 _draw(){
-
 };
 
 static void 
@@ -47,24 +67,64 @@ _free() {
 };
 
 // Interactive handlers
-static void on_key         (GLFWwindow* window, int key, int scancode, int action, int mods){};
-static void on_mouse_move  (GLFWwindow* window, double xpos, double ypos){};
-static void on_scroll      (GLFWwindow* window, double xoffset, double yoffset){};
-static void on_mouse_button(GLFWwindow* window, int button, int action, int mods){};
-
-scene_t scene_hexagons = {
+static void on_key (int key, int scancode, int action, int mods){
     
-    &vbo,
+    // printf("a: %d k: %d\n", action, key);
+    
+    float step = 0.1;
+    if(action > 0)
+    switch(key) {
+
+        // move
+        case GLFW_KEY_KP_4:
+        case GLFW_KEY_LEFT:
+            cam->x-=step;
+            break;
+        case GLFW_KEY_KP_6:
+        case GLFW_KEY_RIGHT:
+            cam->x+=step;
+            break;
+        case GLFW_KEY_KP_8:
+        case GLFW_KEY_UP:
+            cam->y+=step;
+            break;
+        case GLFW_KEY_KP_2:
+        case GLFW_KEY_DOWN:
+            cam->y-=step;
+            break;
+        
+        // zoom
+        case GLFW_KEY_KP_SUBTRACT:
+            cam->s/=2.0;
+            break;
+        case GLFW_KEY_KP_ADD:
+            cam->s*=2.0;
+            break;
+    };
+};
+
+static void on_mouse_move  (double xpos, double ypos){};
+static void on_scroll      (double xoffset, double yoffset){};
+static void on_mouse_button(int button, int action, int mods){};
+
+  //////////////
+ /// GLOBAL ///
+//////////////
+
+scene_i scene_hexagons = {
+    
+    .vbo = &vbo,
+    .cam = &cam,
 
     //interface
-    _init,
-    _update,
-    _draw,
-    _free,
+    .init   = _init,
+    .update = _update,
+    .draw   = _draw,
+    .free   = _free,
 
     // events
-    on_key,
-    on_mouse_move,
-    on_scroll,
-    on_mouse_button
+    .on_key          = on_key,
+    .on_mouse_move   = on_mouse_move,
+    .on_scroll       = on_scroll,
+    .on_mouse_button = on_mouse_button
 };

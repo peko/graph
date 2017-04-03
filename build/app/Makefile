@@ -125,6 +125,33 @@ app/fast:
 	cd /home/peko/prj/dig/build && $(MAKE) -f app/CMakeFiles/app.dir/build.make app/CMakeFiles/app.dir/build
 .PHONY : app/fast
 
+glfw.o: glfw.c.o
+
+.PHONY : glfw.o
+
+# target to build an object file
+glfw.c.o:
+	cd /home/peko/prj/dig/build && $(MAKE) -f app/CMakeFiles/app.dir/build.make app/CMakeFiles/app.dir/glfw.c.o
+.PHONY : glfw.c.o
+
+glfw.i: glfw.c.i
+
+.PHONY : glfw.i
+
+# target to preprocess a source file
+glfw.c.i:
+	cd /home/peko/prj/dig/build && $(MAKE) -f app/CMakeFiles/app.dir/build.make app/CMakeFiles/app.dir/glfw.c.i
+.PHONY : glfw.c.i
+
+glfw.s: glfw.c.s
+
+.PHONY : glfw.s
+
+# target to generate assembly for a file
+glfw.c.s:
+	cd /home/peko/prj/dig/build && $(MAKE) -f app/CMakeFiles/app.dir/build.make app/CMakeFiles/app.dir/glfw.c.s
+.PHONY : glfw.c.s
+
 gui_master.o: gui_master.c.o
 
 .PHONY : gui_master.o
@@ -296,6 +323,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... app"
+	@echo "... glfw.o"
+	@echo "... glfw.i"
+	@echo "... glfw.s"
 	@echo "... gui_master.o"
 	@echo "... gui_master.i"
 	@echo "... gui_master.s"

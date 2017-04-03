@@ -5,10 +5,10 @@
             "name": "C++ Launch",
             "type": "cppdbg",
             "request": "launch",
-            "program": "enter program name, for example ${workspaceRoot}/a.out",
+            "program": "${workspaceRoot}/bin/app",
             "args": [],
             "stopAtEntry": false,
-            "cwd": "${workspaceRoot}",
+            "cwd": "${workspaceRoot}/bin",
             "environment": [],
             "externalConsole": true,
             "linux": {

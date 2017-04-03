@@ -1,5 +1,5 @@
-#include "GLFW/glfw3.h"
-
+#include <stdlib.h>
+#include <GLFW/glfw3.h>
 
 #define NK_INCLUDE_FIXED_TYPES
 #define NK_INCLUDE_STANDARD_IO
@@ -11,7 +11,6 @@
 #define NK_IMPLEMENTATION
 #define NK_GLFW_GL2_IMPLEMENTATION
 
-#include "nuklear.h"
 #include "nuklear_glfw_gl2.h"
 
 #include "gui_i.h"
@@ -28,9 +27,9 @@ static void
 _init(GLFWwindow* window) {
     /* GUI */
     win = window;
+    printf("win %p\n", win);
+
     ctx = nk_glfw3_init(win, NK_GLFW3_INSTALL_CALLBACKS);
-    /* Load Fonts: if none of these are loaded a default font will be used  */
-    /* Load Cursor: if you uncomment cursor loading please hide the cursor */
     {
         struct nk_font_atlas *atlas;
         nk_glfw3_font_stash_begin(&atlas);
@@ -59,7 +58,7 @@ _update(void) {
     if (nk_begin(ctx, "Demo", nk_rect(50, 50, 230, 250),
         NK_WINDOW_BORDER|NK_WINDOW_MOVABLE|NK_WINDOW_SCALABLE|
         NK_WINDOW_MINIMIZABLE|NK_WINDOW_TITLE)) {
-            
+
         enum {EASY, HARD};
         static int op = EASY;
         static int property = 20;
@@ -89,17 +88,11 @@ _update(void) {
         }
     }
     nk_end(ctx);
-
-    /* -------------- EXAMPLES ---------------- */
-    // calculator(ctx);
-    // overview(ctx);
-    // node_editor(ctx);
-    /* ----------------------------------------- */
-
 };
 
 static void 
 _draw(void) {
+    
     /* Draw */
     float bg[4];
     int width, height;

@@ -1,10 +1,14 @@
+#include <stdio.h>
 #include <stdbool.h>
 
 #include "linmath.h"
 
 #include "shader.h"
-#include "render.h"
+#include "render_i.h"
 
+  //////////////
+ /// STATIC ///
+//////////////
 
 static GLuint vertex_shader, fragment_shader, program;
 static char* vertex_shader_text;
@@ -53,14 +57,11 @@ _init() {
 
 // draw loop
 static void 
-_draw(scene_t* scene) {
+_draw(scene_i* scene) {
 
+    cam_t* cam = *(scene->cam);
     vbo_t* vbo = *(scene->vbo);
 
-    float ratio = 1.0;
-    float x = 0.0; 
-    float y = 0.0;
-    float scale = 1.0;
     bool loop = true;
     vec3 col = {1.0, 1.0, 1.0};
 
@@ -80,10 +81,10 @@ _draw(scene_t* scene) {
 
     // SET VIEW
     mat4x4_identity(m);
-    mat4x4_translate_in_place(m, x, y, 0.0);
-    mat4x4_scale_aniso(m, m, scale, scale, scale);
+    mat4x4_translate_in_place(m, cam->x, cam->y, 0.0);
+    mat4x4_scale_aniso(m, m, cam->s, cam->s, cam->s);
 
-    mat4x4_ortho(p, -ratio, ratio, -1.f, 1.f, 1.f, -1.f);
+    mat4x4_ortho(p, -cam->r, cam->r, -1.f, 1.f, 1.f, -1.f);
     mat4x4_mul(mvp, p, m);
 
     // SET SHADER
@@ -121,10 +122,12 @@ _free() {
     glDeleteShader(fragment_shader);
 }
 
-///
+  //////////////
+ /// GLOBAL ///
+//////////////
 
-render_t render_wire = {
-    _init,
-    _free,
-    _draw
+render_i render_wire = {
+    .init = _init,
+    .free = _free,
+    .draw = _draw
 };

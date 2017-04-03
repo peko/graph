@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/app.dir/main.c.o"
+  "CMakeFiles/app.dir/glfw.c.o"
   "CMakeFiles/app.dir/scene_hexagons.c.o"
   "CMakeFiles/app.dir/render_wire.c.o"
   "CMakeFiles/app.dir/gui_master.c.o"

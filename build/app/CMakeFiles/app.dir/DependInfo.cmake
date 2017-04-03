@@ -4,6 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
+  "/home/peko/prj/dig/app/glfw.c" "/home/peko/prj/dig/build/app/CMakeFiles/app.dir/glfw.c.o"
   "/home/peko/prj/dig/app/gui_master.c" "/home/peko/prj/dig/build/app/CMakeFiles/app.dir/gui_master.c.o"
   "/home/peko/prj/dig/app/main.c" "/home/peko/prj/dig/build/app/CMakeFiles/app.dir/main.c.o"
   "/home/peko/prj/dig/app/render_wire.c" "/home/peko/prj/dig/build/app/CMakeFiles/app.dir/render_wire.c.o"
@@ -15,6 +16,7 @@ set(CMAKE_C_COMPILER_ID "GNU")
 
 # The include file search paths:
 set(CMAKE_C_TARGET_INCLUDE_PATH
+  "../app/int"
   "../app/../dep/linmath"
   "../app/../dep/glad"
   "../app/../dep/klib"

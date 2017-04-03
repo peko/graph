@@ -18,5 +18,4 @@ typedef kvec_t(points_v) parts_v;
 
 vbo_t* vbo_new();
 void vbo_free(vbo_t* vbo);
-
 void vbo_fill(vbo_t* vbo, parts_v* parts);

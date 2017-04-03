@@ -81,9 +81,33 @@ app/CMakeFiles/app.dir/main.c.o.provides: app/CMakeFiles/app.dir/main.c.o.requir
 app/CMakeFiles/app.dir/main.c.o.provides.build: app/CMakeFiles/app.dir/main.c.o
 
 
+app/CMakeFiles/app.dir/glfw.c.o: app/CMakeFiles/app.dir/flags.make
+app/CMakeFiles/app.dir/glfw.c.o: ../app/glfw.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/peko/prj/dig/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object app/CMakeFiles/app.dir/glfw.c.o"
+	cd /home/peko/prj/dig/build/app && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/app.dir/glfw.c.o   -c /home/peko/prj/dig/app/glfw.c
+
+app/CMakeFiles/app.dir/glfw.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/app.dir/glfw.c.i"
+	cd /home/peko/prj/dig/build/app && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/peko/prj/dig/app/glfw.c > CMakeFiles/app.dir/glfw.c.i
+
+app/CMakeFiles/app.dir/glfw.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/app.dir/glfw.c.s"
+	cd /home/peko/prj/dig/build/app && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/peko/prj/dig/app/glfw.c -o CMakeFiles/app.dir/glfw.c.s
+
+app/CMakeFiles/app.dir/glfw.c.o.requires:
+
+.PHONY : app/CMakeFiles/app.dir/glfw.c.o.requires
+
+app/CMakeFiles/app.dir/glfw.c.o.provides: app/CMakeFiles/app.dir/glfw.c.o.requires
+	$(MAKE) -f app/CMakeFiles/app.dir/build.make app/CMakeFiles/app.dir/glfw.c.o.provides.build
+.PHONY : app/CMakeFiles/app.dir/glfw.c.o.provides
+
+app/CMakeFiles/app.dir/glfw.c.o.provides.build: app/CMakeFiles/app.dir/glfw.c.o
+
+
 app/CMakeFiles/app.dir/scene_hexagons.c.o: app/CMakeFiles/app.dir/flags.make
 app/CMakeFiles/app.dir/scene_hexagons.c.o: ../app/scene_hexagons.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/peko/prj/dig/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object app/CMakeFiles/app.dir/scene_hexagons.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/peko/prj/dig/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object app/CMakeFiles/app.dir/scene_hexagons.c.o"
 	cd /home/peko/prj/dig/build/app && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/app.dir/scene_hexagons.c.o   -c /home/peko/prj/dig/app/scene_hexagons.c
 
 app/CMakeFiles/app.dir/scene_hexagons.c.i: cmake_force
@@ -107,7 +131,7 @@ app/CMakeFiles/app.dir/scene_hexagons.c.o.provides.build: app/CMakeFiles/app.dir
 
 app/CMakeFiles/app.dir/render_wire.c.o: app/CMakeFiles/app.dir/flags.make
 app/CMakeFiles/app.dir/render_wire.c.o: ../app/render_wire.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/peko/prj/dig/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object app/CMakeFiles/app.dir/render_wire.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/peko/prj/dig/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object app/CMakeFiles/app.dir/render_wire.c.o"
 	cd /home/peko/prj/dig/build/app && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/app.dir/render_wire.c.o   -c /home/peko/prj/dig/app/render_wire.c
 
 app/CMakeFiles/app.dir/render_wire.c.i: cmake_force
@@ -131,7 +155,7 @@ app/CMakeFiles/app.dir/render_wire.c.o.provides.build: app/CMakeFiles/app.dir/re
 
 app/CMakeFiles/app.dir/gui_master.c.o: app/CMakeFiles/app.dir/flags.make
 app/CMakeFiles/app.dir/gui_master.c.o: ../app/gui_master.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/peko/prj/dig/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object app/CMakeFiles/app.dir/gui_master.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/peko/prj/dig/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object app/CMakeFiles/app.dir/gui_master.c.o"
 	cd /home/peko/prj/dig/build/app && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/app.dir/gui_master.c.o   -c /home/peko/prj/dig/app/gui_master.c
 
 app/CMakeFiles/app.dir/gui_master.c.i: cmake_force
@@ -155,7 +179,7 @@ app/CMakeFiles/app.dir/gui_master.c.o.provides.build: app/CMakeFiles/app.dir/gui
 
 app/CMakeFiles/app.dir/shader.c.o: app/CMakeFiles/app.dir/flags.make
 app/CMakeFiles/app.dir/shader.c.o: ../app/shader.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/peko/prj/dig/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object app/CMakeFiles/app.dir/shader.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/peko/prj/dig/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object app/CMakeFiles/app.dir/shader.c.o"
 	cd /home/peko/prj/dig/build/app && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/app.dir/shader.c.o   -c /home/peko/prj/dig/app/shader.c
 
 app/CMakeFiles/app.dir/shader.c.i: cmake_force
@@ -179,7 +203,7 @@ app/CMakeFiles/app.dir/shader.c.o.provides.build: app/CMakeFiles/app.dir/shader.
 
 app/CMakeFiles/app.dir/vbo.c.o: app/CMakeFiles/app.dir/flags.make
 app/CMakeFiles/app.dir/vbo.c.o: ../app/vbo.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/peko/prj/dig/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object app/CMakeFiles/app.dir/vbo.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/peko/prj/dig/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object app/CMakeFiles/app.dir/vbo.c.o"
 	cd /home/peko/prj/dig/build/app && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/app.dir/vbo.c.o   -c /home/peko/prj/dig/app/vbo.c
 
 app/CMakeFiles/app.dir/vbo.c.i: cmake_force
@@ -204,6 +228,7 @@ app/CMakeFiles/app.dir/vbo.c.o.provides.build: app/CMakeFiles/app.dir/vbo.c.o
 # Object files for target app
 app_OBJECTS = \
 "CMakeFiles/app.dir/main.c.o" \
+"CMakeFiles/app.dir/glfw.c.o" \
 "CMakeFiles/app.dir/scene_hexagons.c.o" \
 "CMakeFiles/app.dir/render_wire.c.o" \
 "CMakeFiles/app.dir/gui_master.c.o" \
@@ -214,6 +239,7 @@ app_OBJECTS = \
 app_EXTERNAL_OBJECTS =
 
 ../bin/app: app/CMakeFiles/app.dir/main.c.o
+../bin/app: app/CMakeFiles/app.dir/glfw.c.o
 ../bin/app: app/CMakeFiles/app.dir/scene_hexagons.c.o
 ../bin/app: app/CMakeFiles/app.dir/render_wire.c.o
 ../bin/app: app/CMakeFiles/app.dir/gui_master.c.o
@@ -223,7 +249,7 @@ app_EXTERNAL_OBJECTS =
 ../bin/app: graph/libgraph.a
 ../bin/app: app/glad/libglad.a
 ../bin/app: app/CMakeFiles/app.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/peko/prj/dig/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking C executable ../../bin/app"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/peko/prj/dig/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking C executable ../../bin/app"
 	cd /home/peko/prj/dig/build/app && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/app.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -232,6 +258,7 @@ app/CMakeFiles/app.dir/build: ../bin/app
 .PHONY : app/CMakeFiles/app.dir/build
 
 app/CMakeFiles/app.dir/requires: app/CMakeFiles/app.dir/main.c.o.requires
+app/CMakeFiles/app.dir/requires: app/CMakeFiles/app.dir/glfw.c.o.requires
 app/CMakeFiles/app.dir/requires: app/CMakeFiles/app.dir/scene_hexagons.c.o.requires
 app/CMakeFiles/app.dir/requires: app/CMakeFiles/app.dir/render_wire.c.o.requires
 app/CMakeFiles/app.dir/requires: app/CMakeFiles/app.dir/gui_master.c.o.requires

@@ -1,6 +1,6 @@
 #pragma once
 
-#include "scene.h"
+#include "scene_i.h"
 
 typedef struct {
 
@@ -8,6 +8,6 @@ typedef struct {
     void (*init)();
     void (*free)();
 
-    void (*draw)(scene_t* scene);
+    void (*draw)(scene_i* scene);
 
-} render_t;
+} render_i;
