@@ -89,9 +89,9 @@ nk_glfw3_render(enum nk_anti_aliasing AA) {
     glPushMatrix();
     glLoadIdentity();
 
-    glEnableClientState(GL_VERTEX_ARRAY);
+    glEnableClientState(GL_VERTEX_ARRAY       );
     glEnableClientState(GL_TEXTURE_COORD_ARRAY);
-    glEnableClientState(GL_COLOR_ARRAY);
+    glEnableClientState(GL_COLOR_ARRAY        );
     {
         GLsizei vs = sizeof(struct nk_glfw_vertex);
         size_t vp = offsetof(struct nk_glfw_vertex, position);

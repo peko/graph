@@ -1,3 +1,0 @@
-/home/peko/prj/dig/vec/build/CMakeFiles/rebuild_cache.dir
-/home/peko/prj/dig/vec/build/CMakeFiles/edit_cache.dir
-/home/peko/prj/dig/vec/build/CMakeFiles/vec.dir
